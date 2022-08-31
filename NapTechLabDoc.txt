@@ -1,0 +1,28 @@
+Setup and run:
+
+1. Download and install xampp.
+2. Rename the php file in htdocs.
+3. Extract the NapTechLab folder files into the htdocs.
+4. Run Apache and MySQL from control panel.
+5. Import nap_tech_lab.sql file into MySQL Database.
+6. Run localhost and select NapTechLab folder => example-app folder => public folder.
+
+
+Tasks:
+
+1. Install a Laravel project and create a MySQL database named nap_tech_lab.
+2. Mastering the template including the Admin panel.
+3. User Authentication and validation with Laravel Jetstream.
+4. Make Blog page with CRUD operation.
+5. Subscribe newsletter by email and submit it at the footer section after login.
+6. At this project --> Admin email => felipa3658789419@gmail.com and Admin password --> 123456789.
+   (You can create an Admin account manually by changing the value of nap_tech_lab database users table user_type column value by "admin")
+   (Normally new register users are not able to access admin panel)
+7. Email operation is done after submitting Get in touch section info on the contact page and save this info in admin panel.
+   (At gmail --> Admin email => felipa3658789419@gmail.com and Admin password --> felipa@3658789419) 
+8. Google stop the Less secure app access for this reason email not send.
+   (See this link => https://support.google.com/accounts/answer/6010255?hl=en&visit_id=637975299423034576-2512568785&p=less-secure-apps&rd=1)
+
+
+
+

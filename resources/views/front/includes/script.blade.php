@@ -1,0 +1,11 @@
+<script src="{{asset('/')}}js/jquery.min.js"></script>
+<script src="{{asset('/')}}js/jquery-migrate-3.0.0.min.js"></script>
+<script src="{{asset('/')}}js/circliful.min.js"></script>
+<script src="{{asset('/')}}js/bootstrap.min.js"></script>
+<script src="{{asset('/')}}js/isotope.js"></script>
+<script src="{{asset('/')}}js/slick.min.js"></script>
+<script src="{{asset('/')}}js/wow.min.js"></script>
+<script src="{{asset('/')}}js/waypoints.min.js"></script>
+<script src="{{asset('/')}}js/counterup.min.js"></script>
+<script src="{{asset('/')}}js/jquery.magnific-popup.min.js"></script>
+<script src="{{asset('/')}}js/main.js"></script>
