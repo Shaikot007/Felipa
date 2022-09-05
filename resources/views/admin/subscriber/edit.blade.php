@@ -16,8 +16,9 @@
                     </div>
                 </div>
                 <div class="ibox-body">
-                    <form class="form-horizontal" action="{{route('subscriber.update', ['id' => $subscriber->id])}}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{url('subscribers/'.$subscriber->id.'')}}" method="post" enctype="multipart/form-data">
                         @csrf
+                        @method('put')
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Category title</label>
                             <div class="col-sm-10">

@@ -24,7 +24,7 @@
                             </button>
                         </div>
                     @endif
-                    <form class="form-horizontal" action="{{route('blog.new')}}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{route('blogs.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Blog title</label>

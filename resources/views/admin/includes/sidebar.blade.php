@@ -14,10 +14,10 @@
                     <span class="nav-label">Blog</span><i class="fa fa-angle-left arrow"></i></a>
                 <ul class="nav-2-level collapse">
                     <li>
-                        <a href="{{route('blog.add')}}">Add blog</a>
+                        <a href="{{route('blogs.index')}}">Add blog</a>
                     </li>
                     <li>
-                        <a href="{{route('blog.manage')}}">Manage blog</a>
+                        <a href="{{route('blogs.create')}}">Manage blog</a>
                     </li>
                 </ul>
             </li>
@@ -26,10 +26,10 @@
                     <span class="nav-label">Subscriber</span><i class="fa fa-angle-left arrow"></i></a>
                 <ul class="nav-2-level collapse">
                     <li>
-                        <a href="{{route('subscriber.add')}}">Add subscriber</a>
+                        <a href="{{route('subscribers.index')}}">Add subscriber</a>
                     </li>
                     <li>
-                        <a href="{{route('subscriber.manage')}}">Manage subscriber</a>
+                        <a href="{{route('subscribers.create')}}">Manage subscriber</a>
                     </li>
                 </ul>
             </li>

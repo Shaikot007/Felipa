@@ -34,14 +34,15 @@
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$subscriber->email}}</td>
                                     <td>
-                                        <a href="{{route('subscriber.edit', ['id' => $subscriber->id])}}" class="btn btn-success btn-xs" title="Edit">
+                                        <a href="{{url('subscribers/'.$subscriber->id.'/edit')}}" class="btn btn-success btn-xs" title="Edit">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <a href="" class="btn btn-danger btn-xs" onclick="event.preventDefault(); document.getElementById('subscriberDeleteForm{{$subscriber->id}}').submit();" title="Delete">
                                             <i class="fa fa-trash"></i>
                                         </a>
-                                        <form action="{{route('subscriber.delete', ['id' => $subscriber->id])}}" method="post" id="subscriberDeleteForm{{$subscriber->id}}">
+                                        <form action="{{url('/subscribers/'.$subscriber->id.'')}}" method="post" id="subscriberDeleteForm{{$subscriber->id}}">
                                             @csrf
+                                            @method('delete')
                                         </form>
                                     </td>
                                 </tr>

@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\SubscriberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::resource('subscribers', SubscriberController::class);
 
 //=============================Felipa route start=============================
 
@@ -59,89 +65,52 @@ Route::get('/dashboard', [
 
 //=============================Contact route start============================
 
-Route::post('/mail-contact', [
-    'uses'          => 'App\Http\Controllers\ContactController@store',
-    'as'            => 'mail.contact'
-]);
+Route::resource('mail-contact', ContactController::class);
 
 //==============================Contact route end=============================
 
 //===============================Blog route start==============================
 
-Route::get('/add-blog', [
-    'uses'          => 'App\Http\Controllers\BlogController@index',
-    'as'            => 'blog.add',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::get('/manage-blog', [
-    'uses'          => 'App\Http\Controllers\BlogController@manage',
-    'as'            => 'blog.manage',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::post('/new-blog', [
-    'uses'          => 'App\Http\Controllers\BlogController@create',
-    'as'            => 'blog.new',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::get('/edit-blog/{id}', [
-    'uses'          => 'App\Http\Controllers\BlogController@edit',
-    'as'            => 'blog.edit',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::post('/update-blog/{id}', [
-    'uses'          => 'App\Http\Controllers\BlogController@update',
-    'as'            => 'blog.update',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::post('/delete-blog/{id}', [
-    'uses'          => 'App\Http\Controllers\BlogController@delete',
-    'as'            => 'blog.delete',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
+Route::resource('blogs', BlogController::class);
 
 //==============================Blog route end=============================
 
 //==========================Subscriber route start=========================
 
-Route::get('/add-subscriber', [
-    'uses'          => 'App\Http\Controllers\SubscriberController@index',
-    'as'            => 'subscriber.add',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::get('/manage-subscriber', [
-    'uses'          => 'App\Http\Controllers\SubscriberController@manage',
-    'as'            => 'subscriber.manage',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::post('/new-subscriber', [
-    'uses'          => 'App\Http\Controllers\SubscriberController@create',
-    'as'            => 'subscriber.new',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::get('/edit-subscriber/{id}', [
-    'uses'          => 'App\Http\Controllers\SubscriberController@edit',
-    'as'            => 'subscriber.edit',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::post('/update-subscriber/{id}', [
-    'uses'          => 'App\Http\Controllers\SubscriberController@update',
-    'as'            => 'subscriber.update',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
-
-Route::post('/delete-subscriber/{id}', [
-    'uses'          => 'App\Http\Controllers\SubscriberController@delete',
-    'as'            => 'subscriber.delete',
-    'middleware'    => ['auth:sanctum', 'verified']
-]);
+//Route::get('/add-subscriber', [
+//    'uses'          => 'App\Http\Controllers\SubscriberController@index',
+//    'as'            => 'subscriber.add',
+//    'middleware'    => ['auth:sanctum', 'verified']
+//]);
+//
+//Route::get('/manage-subscriber', [
+//    'uses'          => 'App\Http\Controllers\SubscriberController@manage',
+//    'as'            => 'subscriber.manage',
+//    'middleware'    => ['auth:sanctum', 'verified']
+//]);
+//
+//Route::post('/new-subscriber', [
+//    'uses'          => 'App\Http\Controllers\SubscriberController@create',
+//    'as'            => 'subscriber.new',
+//    'middleware'    => ['auth:sanctum', 'verified']
+//]);
+//
+//Route::get('/edit-subscriber/{id}', [
+//    'uses'          => 'App\Http\Controllers\SubscriberController@edit',
+//    'as'            => 'subscriber.edit',
+//    'middleware'    => ['auth:sanctum', 'verified']
+//]);
+//
+//Route::post('/update-subscriber/{id}', [
+//    'uses'          => 'App\Http\Controllers\SubscriberController@update',
+//    'as'            => 'subscriber.update',
+//    'middleware'    => ['auth:sanctum', 'verified']
+//]);
+//
+//Route::post('/delete-subscriber/{id}', [
+//    'uses'          => 'App\Http\Controllers\SubscriberController@delete',
+//    'as'            => 'subscriber.delete',
+//    'middleware'    => ['auth:sanctum', 'verified']
+//]);
 
 //===========================Subscriber route end==========================

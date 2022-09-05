@@ -67,7 +67,7 @@
                         {{Session::get('success')}}
                     </div>
                 @endif
-                <form method="post" action="{{ route('mail.contact') }}" id="contactUSForm">
+                <form method="post" action="{{ url('mail-contact') }}" id="contactUSForm">
                     {{ csrf_field() }}
                     <div class="row contact-form">
                         <div class="col-md-6">

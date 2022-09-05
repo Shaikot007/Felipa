@@ -42,14 +42,15 @@
                                         <img src="{{asset($blog->thumbnail)}}" alt="Image" height="70" width="100"/>
                                     </td>
                                     <td>
-                                        <a href="{{route('blog.edit', ['id' => $blog->id])}}" class="btn btn-success btn-xs" title="Edit">
+                                        <a href="{{url('blogs/'.$blog->id.'/edit')}}" class="btn btn-success btn-xs" title="Edit">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <a href="" class="btn btn-danger btn-xs" onclick="event.preventDefault(); document.getElementById('blogDeleteForm{{$blog->id}}').submit();" title="Delete">
                                             <i class="fa fa-trash"></i>
                                         </a>
-                                        <form action="{{route('blog.delete', ['id' => $blog->id])}}" method="post" id="blogDeleteForm{{$blog->id}}">
+                                        <form action="{{url('/blogs/'.$blog->id.'')}}" method="post" id="blogDeleteForm{{$blog->id}}">
                                             @csrf
+                                            @method('delete')
                                         </form>
                                     </td>
                                 </tr>
