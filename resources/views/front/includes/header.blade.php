@@ -35,7 +35,7 @@
                 @if(\Illuminate\Support\Facades\Auth::user())
                     @if(\Illuminate\Support\Facades\Auth::user()->user_type === "admin")
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('dashboard')}}">Dashboard</a>
+                            <a class="nav-link" href="{{url('dashboard')}}">Dashboard</a>
                         </li>
                     @endif
                 @endif

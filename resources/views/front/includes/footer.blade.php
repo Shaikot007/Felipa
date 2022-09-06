@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-sm-6 col-xl-4 footer-widget">
                     <h3 class="widget-title">Subscribe newsletter</h3>
-                    <form class="mc4wp-form" action="{{route('subscriber.new')}}" method="post">
+                    <form class="mc4wp-form" action="{{url('subscribers')}}" method="post">
                         @csrf
                         <div class="mc4wp-form-fields">
                             <input type="email" name="email" placeholder="Your email address"/>
