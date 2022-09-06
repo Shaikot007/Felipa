@@ -31,4 +31,3 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::resource('subscribers', SubscriberController::class);
     Route::resource('mail-contact', ContactController::class);
 });
-
